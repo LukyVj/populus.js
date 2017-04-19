@@ -1,0 +1,1178 @@
+/**
+ * Breakpoints
+ */
+/**
+ * Dimensions
+ */
+/**
+ * Mixin
+ */
+/**
+ * RETINA
+ *
+ * Detect retina / high density pixels screens
+ *
+ *  @content [Write the style you want to apply to the diagonal edge, and it will be added within the @content directive]
+ */
+/**
+ * DIAGONAL
+ *
+ * Generate a diagonal edge on a before pseudo element
+ *
+ *  $rotation: diagonal degree
+ *  $background : background color, image, gradient
+ *  $height: height of the edge ( px, %, cm, pc, etc)
+ *
+ *  @content [Write the style you want to apply to the diagonal edge, and it will be added within the @content directive]
+ */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+/* line 3, _base.scss */
+:root {
+  font-size: 18px; }
+
+@media (max-width: 768px) {
+  /* line 8, _base.scss */
+  :root {
+    font-size: calc(3vw + 0.4vh / 2); } }
+/* line 13, _base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    /* line 13, _base.scss */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscaled; } }
+  @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
+    /* line 13, _base.scss */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscaled; } }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 13, _base.scss */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscaled; } }
+
+/* line 25, _base.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 32, _base.scss */
+body {
+  background: #FCFCFC;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  float: left;
+  padding-top: 50px;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #fff, #f7f7ff); }
+
+/* line 42, _base.scss */
+ul {
+  padding: 0;
+  margin: 0; }
+
+/* line 47, _base.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #3369E7;
+  position: relative;
+  display: inline-block; }
+  /* line 52, _base.scss */
+  h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    left: inherit;
+    right: -50px; }
+  /* line 57, _base.scss */
+  h1.colored, h2.colored, h3.colored, h4.colored, h5.colored, h6.colored {
+    color: #3369E7; }
+
+/* line 62, _base.scss */
+p {
+  line-height: 24px;
+  font-size: 1em;
+  opacity: 0.6; }
+
+/* line 68, _base.scss */
+h1 {
+  font-size: 36px;
+  line-height: 45px; }
+
+/* line 73, _base.scss */
+h2 {
+  font-size: 30px;
+  line-height: 45px; }
+
+/* line 78, _base.scss */
+h3 {
+  font-size: 24px;
+  line-height: 45px; }
+
+/* line 83, _base.scss */
+h4 {
+  font-size: 18px;
+  line-height: 26px; }
+
+/* Won't be used here */
+/* line 90, _base.scss */
+h5 {
+  font-size: 14px;
+  line-height: 26px; }
+
+/* line 95, _base.scss */
+h6 {
+  font-size: 12px;
+  line-height: 26px; }
+
+/* line 1, _buttons.scss */
+.btn {
+  border: 2px solid #9d9dbd;
+  padding: 0 20px;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 36px;
+  box-sizing: border-box;
+  position: relative;
+  color: #182359;
+  background-color: transparent;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center; }
+  /* line 20, _buttons.scss */
+  .btn span,
+  .btn img {
+    display: inline-block; }
+  /* line 24, _buttons.scss */
+  .btn img {
+    max-width: 18px;
+    vertical-align: middle;
+    margin-left: 1em; }
+
+/* line 30, _buttons.scss */
+.btn:hover, .btn:focus, .btn:active, .btn.active {
+  outline: 0 !important;
+  box-shadow: none !important;
+  color: #182359;
+  background-color: rgba(157, 157, 189, 0.3);
+  text-decoration: none; }
+
+@media (max-width: 678px) {
+  /* line 38, _buttons.scss */
+  .btn {
+    font-size: 14px; } }
+/* line 43, _buttons.scss */
+.btn-static-primary {
+  color: white;
+  background-color: #2dde98;
+  border-color: #2dde98; }
+
+/* line 48, _buttons.scss */
+.btn-static-primary:hover, .btn-static-primary:focus, .btn-static-primary:active, .btn-static-primary.active {
+  color: white;
+  background-color: #59e5ae;
+  border-color: #59e5ae; }
+
+/* line 54, _buttons.scss */
+.btn-static-inverse {
+  color: white; }
+
+/* line 57, _buttons.scss */
+.btn-static-inverse:hover, .btn-static-inverse:focus, .btn-static-inverse:active, .btn-static-inverse.active {
+  color: white; }
+
+/* line 61, _buttons.scss */
+.btn-static-dark {
+  color: white;
+  background-color: transparent;
+  border-color: #FFF; }
+
+/* line 66, _buttons.scss */
+.btn-static-dark:hover, .btn-static-dark:focus, .btn-static-dark:active, .btn-static-dark.active {
+  color: white;
+  background-color: #182359;
+  border-color: #182359; }
+
+/* line 72, _buttons.scss */
+.btn-static-enterprise {
+  color: white;
+  background-color: #050f2c;
+  border-color: #2dde98; }
+
+/* line 77, _buttons.scss */
+.btn-static-enterprise:hover, .btn-static-enterprise:focus, .btn-static-enterprise:active, .btn-static-enterprise.active {
+  color: white;
+  background-color: #2dde98;
+  border-color: #2dde98; }
+
+/* line 1, _generic.scss */
+.am-container {
+  max-width: 980px;
+  margin: auto;
+  position: relative; }
+
+/* line 7, _generic.scss */
+.appear {
+  opacity: 1;
+  animation: pop 1s ease;
+  display: inline-block; }
+
+/* line 13, _generic.scss */
+.content {
+  position: relative; }
+
+/* line 17, _generic.scss */
+.zi-10 {
+  z-index: 10; }
+
+/* line 22, _generic.scss */
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-item: center; }
+
+/* line 29, _generic.scss */
+.tc {
+  text-align: center; }
+
+/* line 34, _generic.scss */
+.fr {
+  float: right; }
+
+/* line 38, _generic.scss */
+.pv5 {
+  padding: 5em 0; }
+
+/* line 42, _generic.scss */
+.mv5 {
+  margin-top: 5em;
+  margin-bottom: 5em; }
+
+/* line 49, _generic.scss */
+.mv10 {
+  margin-top: 10em;
+  margin-bottom: 10em; }
+
+@keyframes pop {
+  66% {
+    transform: scale(1.2); } }
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, _normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, _normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, _normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, _normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, _normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, _normalize.scss */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, _normalize.scss */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, _normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, _normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, _normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, _normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, _normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, _normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, _normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, _normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, _normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, _normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 187, _normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 191, _normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, _normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, _normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, _normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, _normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, _normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, _normalize.scss */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, _normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, _normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, _normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, _normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, _normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, _normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, _normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, _normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, _normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, _normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, _normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, _normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, _normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, _normalize.scss */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, _normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Custom page footer */
+/* line 2, _footer.scss */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  float: left;
+  width: 100%;
+  min-height: 120px;
+  background: #0e214b;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 16px; }
+
+/* line 15, _footer.scss */
+.footer .col {
+  line-height: 22px; }
+
+/* line 19, _footer.scss */
+.container-narrow > hr {
+  margin: 30px 0; }
+
+/* line 24, _footer.scss */
+.footer {
+  font-size: 14px; }
+
+/* line 27, _footer.scss */
+.footer .col {
+  max-width: 300px;
+  height: 100%;
+  float: left;
+  margin: 0 16px;
+  text-align: justify; }
+
+/* line 34, _footer.scss */
+.footer .col:last-child {
+  float: right;
+  max-width: 500px; }
+
+/* line 38, _footer.scss */
+.footer a {
+  text-decoration: none;
+  width: 100%;
+  float: left;
+  line-height: 2;
+  color: #fff; }
+
+/* line 45, _footer.scss */
+.footer a img {
+  max-width: 18px;
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-top: 3px; }
+
+/* line 15, site.css.scss */
+.section {
+  background: linear-gradient(to bottom right, #fff, #f7f7ff); }
+  /* line 17, site.css.scss */
+  .section h3 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    line-height: 1; }
+
+/* line 23, site.css.scss */
+#title span {
+  opacity: 0; }
+
+/* line 26, site.css.scss */
+.nav {
+  height: 50px;
+  background: #0e214b;
+  position: fixed;
+  z-index: 31;
+  width: 100%;
+  top: 0; }
+  /* line 34, site.css.scss */
+  .nav .brand {
+    width: 120px;
+    height: 50px;
+    float: left;
+    background: #FFF; }
+    /* line 40, site.css.scss */
+    .nav .brand img {
+      display: none; }
+  /* line 45, site.css.scss */
+  .nav ul {
+    list-style: none;
+    height: 50px;
+    display: block;
+    margin: auto;
+    line-height: 50px; }
+    /* line 52, site.css.scss */
+    .nav ul li {
+      display: inline-block;
+      margin-right: 1em; }
+      /* line 56, site.css.scss */
+      .nav ul li a {
+        color: #fff;
+        text-decoration: none; }
+
+/* line 66, site.css.scss */
+.hero-header {
+  width: 100%;
+  min-height: 580px;
+  color: #fff;
+  float: left;
+  text-align: center;
+  position: relative;
+  background: #000 url(../images/hero-header-min.png) no-repeat center center/100% fixed; }
+  /* line 76, site.css.scss */
+  .hero-header .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%; }
+    /* line 80, site.css.scss */
+    .hero-header .hero-content h1 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 800;
+      text-shadow: 0 0 30px rgba(0, 0, 0, 0.8); }
+      /* line 88, site.css.scss */
+      .hero-header .hero-content h1 small {
+        letter-spacing: 0.4em;
+        text-align: center;
+        margin-left: 0.5em;
+        position: relative;
+        top: 0.3em; }
+      /* line 96, site.css.scss */
+      .hero-header .hero-content h1:before, .hero-header .hero-content h1:after {
+        display: none; }
+    /* line 102, site.css.scss */
+    .hero-header .hero-content h2 {
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0 0 20px black; }
+      /* line 107, site.css.scss */
+      .hero-header .hero-content h2:before, .hero-header .hero-content h2:after {
+        display: none; }
+
+/* line 121, site.css.scss */
+.scroll-down {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  bottom: -20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 3; }
+  /* line 134, site.css.scss */
+  .scroll-down svg {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%); }
+
+/* line 145, site.css.scss */
+.section {
+  position: relative;
+  width: 100%;
+  float: left; }
+  /* line 150, site.css.scss */
+  .section .am-container header {
+    margin-bottom: 5em;
+    text-align: center; }
+    /* line 154, site.css.scss */
+    .section .am-container header h2 {
+      font-weight: 800;
+      position: relative;
+      padding-left: 1.5em; }
+  /* line 164, site.css.scss */
+  .section.intro-section {
+    text-align: center; }
+    /* line 167, site.css.scss */
+    .section.intro-section h2 {
+      line-height: 1.5;
+      margin-top: 4em; }
+
+/* line 175, site.css.scss */
+.details-section {
+  padding-top: 12em; }
+  /* line 178, site.css.scss */
+  .details-section .am-container {
+    z-index: 3;
+    top: -100px;
+    max-width: 80%; }
+  /* line 184, site.css.scss */
+  .details-section .item {
+    flex: calc(33.33% - 2em);
+    width: calc(33.33% - 2em);
+    padding: 1em 3em;
+    text-align: center; }
+    /* line 190, site.css.scss */
+    .details-section .item h4 {
+      font-size: 1.2em;
+      font-weight: thin; }
+    /* line 194, site.css.scss */
+    .details-section .item p {
+      text-align: center;
+      width: 100%; }
+    @media (max-width: 768px) {
+      /* line 184, site.css.scss */
+      .details-section .item {
+        width: 100%;
+        flex: 100%; } }
+    /* line 205, site.css.scss */
+    .details-section .item h4 {
+      width: 100%; }
+      @media (max-width: 768px) {
+        /* line 205, site.css.scss */
+        .details-section .item h4 {
+          width: 100%; } }
+      /* line 211, site.css.scss */
+      .details-section .item h4:before, .details-section .item h4:after {
+        display: none; }
+    /* line 217, site.css.scss */
+    .details-section .item img {
+      height: 62px; }
+
+/* line 223, site.css.scss */
+.process-section {
+  margin-top: 6em;
+  padding-top: 3em; }
+  /* line 227, site.css.scss */
+  .process-section .am-container {
+    z-index: 3;
+    top: -100px;
+    max-width: 80%; }
+  /* line 233, site.css.scss */
+  .process-section .item {
+    flex: calc(33.33% - 2em);
+    width: calc(33.33% - 2em);
+    padding: 1em 3em;
+    text-align: center; }
+    /* line 239, site.css.scss */
+    .process-section .item p {
+      text-align: justify; }
+    @media (max-width: 768px) {
+      /* line 233, site.css.scss */
+      .process-section .item {
+        width: 100%;
+        flex: 100%; } }
+    /* line 248, site.css.scss */
+    .process-section .item h4 {
+      width: 100%; }
+      @media (max-width: 768px) {
+        /* line 248, site.css.scss */
+        .process-section .item h4 {
+          width: 100%; } }
+      /* line 254, site.css.scss */
+      .process-section .item h4:before, .process-section .item h4:after {
+        display: none; }
+    /* line 260, site.css.scss */
+    .process-section .item img {
+      max-width: 92px; }
+
+/* line 268, site.css.scss */
+.important-section {
+  background: #3369E7;
+  color: #fff !important;
+  z-index: 20;
+  height: 300px;
+  margin-top: 3em;
+  align-items: center; }
+  /* line 276, site.css.scss */
+  .important-section .item {
+    flex: 33%;
+    margin-top: 3em; }
+  /* line 281, site.css.scss */
+  .important-section a {
+    text-decoration: none; }
+  /* line 286, site.css.scss */
+  .important-section h2, .important-section h3 {
+    color: #fff; }
+  /* line 290, site.css.scss */
+  .important-section h3 {
+    text-transform: uppercase; }
+  /* line 294, site.css.scss */
+  .important-section .am-container header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center; }
+  /* line 86, _settings.scss */
+  .important-section:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #3369E7;
+    transform: skewY(-5deg);
+    top: 200px; }
+  /* line 86, _settings.scss */
+  .important-section:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #3369E7;
+    transform: skewY(-5deg);
+    top: -100px; }
+
+/* line 310, site.css.scss */
+.trust-section {
+  background: #555;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10em; }
+  /* line 315, site.css.scss */
+  .trust-section .item {
+    flex: calc(22.5% - 2em);
+    width: calc(22.5% - 2em);
+    padding: 1em;
+    text-align: center; }
+    @media (max-width: 768px) {
+      /* line 315, site.css.scss */
+      .trust-section .item {
+        width: 50%;
+        flex: 50%; } }
+    /* line 326, site.css.scss */
+    .trust-section .item img {
+      max-width: 80%; }
+  /* line 86, _settings.scss */
+  .trust-section:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #555;
+    transform: skewY(5deg);
+    top: -100px; }
+  /* line 86, _settings.scss */
+  .trust-section:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: #555;
+    transform: skewY(5deg);
+    top: 350px; }
+
+/* line 341, site.css.scss */
+.definition-section {
+  text-align: center;
+  top: -200px;
+  padding-top: 6em; }
+  /* line 346, site.css.scss */
+  .definition-section .am-container {
+    max-width: 80%; }
+  /* line 350, site.css.scss */
+  .definition-section li {
+    font-size: 14px;
+    margin-bottom: 1em;
+    color: #4B4F56; }
+    /* line 355, site.css.scss */
+    .definition-section li:before {
+      content: "- "; }
+    /* line 359, site.css.scss */
+    .definition-section li:first-child {
+      margin-top: 2em; }
+  /* line 364, site.css.scss */
+  .definition-section .card-item {
+    flex: 0 1 30% !important; }
+    /* line 367, site.css.scss */
+    .definition-section .card-item section {
+      border-top: none; }
+    /* line 371, site.css.scss */
+    .definition-section .card-item header {
+      background: #0e214b;
+      position: relative;
+      width: calc(100% + 2em);
+      left: -1em;
+      top: -1em; }
+      /* line 378, site.css.scss */
+      .definition-section .card-item header h3 {
+        color: #fff;
+        font-size: 1.2em; }
+    /* line 385, site.css.scss */
+    .definition-section .card-item:hover header {
+      background: #3369E7; }
+
+/* line 393, site.css.scss */
+.acquisition-section {
+  background: #3369E7;
+  color: #FFF;
+  margin-bottom: -11.5em;
+  padding-bottom: 6em; }
+  /* line 399, site.css.scss */
+  .acquisition-section header h3 {
+    color: #fff; }
+  /* line 403, site.css.scss */
+  .acquisition-section .card-item:hover header {
+    background: #21d18b; }
+
+/* line 411, site.css.scss */
+footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  display: block;
+  min-height: 300px; }
+  /* line 418, site.css.scss */
+  footer:before {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    transform: rotate(-180deg);
+    background-repeat: no-repeat;
+    background-position: center top -2px;
+    background-size: 102%; }
+
+/* line 436, site.css.scss */
+.bold {
+  font-weight: bold; }
+
+/* line 443, site.css.scss */
+.card-holder {
+  justify-content: space-around;
+  position: relative; }
+  /* line 449, site.css.scss */
+  .card-holder.arrows:before, .card-holder.arrows:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 20%;
+    height: 50px;
+    background: url(../images/arrow-icon.svg) no-repeat center center/contain;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  /* line 463, site.css.scss */
+  .card-holder.arrows:before {
+    left: 33%; }
+  /* line 466, site.css.scss */
+  .card-holder.arrows:after {
+    right: 34%; }
+  /* line 471, site.css.scss */
+  .card-holder:hover .card-timeline:not(:hover) {
+    opacity: 0.6; }
+
+/* line 479, site.css.scss */
+.card-timeline, .card-item {
+  display: inline-block;
+  position: relative;
+  flex: 0 1 26% !important;
+  background-color: white;
+  vertical-align: top;
+  text-align: left;
+  max-height: 480px;
+  margin: 20px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+  white-space: normal;
+  -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  -moz-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  padding: 1em !important;
+  position: relative; }
+  /* line 497, site.css.scss */
+  .card-timeline header, .card-item header {
+    background: #fff;
+    height: 160px;
+    line-height: 160px;
+    margin-bottom: 0 !important; }
+    /* line 503, site.css.scss */
+    .card-timeline header img, .card-item header img {
+      vertical-align: middle;
+      filter: grayscale(100%); }
+  /* line 509, site.css.scss */
+  .card-timeline section, .card-item section {
+    border-top: 1px solid #E9EBEE; }
+  /* line 513, site.css.scss */
+  .card-timeline h4, .card-item h4 {
+    color: #4B4F56; }
+  /* line 517, site.css.scss */
+  .card-timeline ul, .card-item ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  /* line 523, site.css.scss */
+  .card-timeline:hover, .card-item:hover {
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.16);
+    transform: translate(0, -20px) translateZ(0);
+    transition-delay: 0s !important; }
+    /* line 528, site.css.scss */
+    .card-timeline:hover header img, .card-item:hover header img {
+      filter: grayscale(0%); }
+  /* line 536, site.css.scss */
+  .card-timeline:nth-child(2):hover:before, .card-timeline:nth-child(2):hover:after, .card-item:nth-child(2):hover:before, .card-item:nth-child(2):hover:after {
+    display: none; }
