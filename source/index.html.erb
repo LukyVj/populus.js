@@ -1,0 +1,190 @@
+---
+title: POPVLVS.js
+---
+<nav class="navigation">
+  <ul>
+    <li><a href="#">Introduction</a></li>
+    <li><a href="#">Demo</a></li>
+    <li><a href="#">Api</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <div class="hero text-center p-xlarge">
+    <header class="m100p">
+      <span>🌿</span>
+      <h1 class="w100p inline">POPVLVS</h1>
+      <h3>Small javascript toolbelt to populate search inputs</h3>
+
+      <div class="p-xlarge">
+
+        <a href="#" class="btn btn-static-theme btn-shadow">Download POPVLVS.JS (1kb) </a>
+
+      </div>
+    </header>
+  </div>
+
+  <span class="line"></span>
+
+  <section class="section p-xlarge text-center">
+    <p>It's often bothering, if not difficult to set up a small demo using a text or a search input. Depending what you want to achieve, you have to set up the submit buttons, the clear buttons, the update of the value of the input, accessibility, etc. </p>
+    <p>That's why POPVLVS ( read "Populus" ) was born, it was made to help you setting up complete text input, to build Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laudantium excepturi laboriosam, tempore a, totam? Id natus magnam nobis laudantium deserunt sapiente eius aut consectetur quos, excepturi incidunt. Fugiat, impedit.</p>
+  </section>
+
+  <span class="line"></span>
+
+  <section class="section section-demo p-xlarge">
+    <header>
+      <h2>Demo</h2>
+    </header>
+
+    <pre><code>&lt;input type="text"></code></pre>
+    <!-- Populus demo -->
+    <input type="search">
+
+
+    <pre><code>&lt;input type="text" data-populus></code></pre>
+    <!-- Populus demo -->
+
+    <input type="search" data-populus-a>
+
+
+  </section>
+
+  <span class="line"></span>
+
+  <section class="section section-api p-xlarge">
+    <header>
+      <h2>API</h2>
+    </header>
+
+<!--     <article>
+      <header>
+        <h3>Method</h3>
+      </header>
+      <section>
+        <p><code>init()</code></p>
+        <p></p>
+      </section>
+    </article> -->
+
+    <div id="api">
+      <nav>
+        <!-- <h3>Api documentation</h3> -->
+        <ul>
+          <li><a href="#api-target">target</a></li>
+          <li><a href="#api-features-wrapper">features.wrapper</a></li>
+          <li><a href="#api-features-placeholder">features.placeholder</a></li>
+          <li><a href="#api-features-autofocus">features.autofocus</a></li>
+          <li><a href="#api-features-updateValue">features.updateValue</a></li>
+          <li><a href="#api-features-a11y-label">features.a11y.label</a></li>
+          <li><a href="#api-features-a11y-outline">features.a11y.outline</a></li>
+          <li><a href="#api-buttons-search-label">buttons.search.label</a></li>
+          <li><a href="#api-buttons-search-click">buttons.search.click</a></li>
+          <li><a href="#api-buttons-cancel-label">buttons.cancel.label</a></li>
+          <li><a href="#api-buttons-cancel-click">buttons.cancel.click</a></li>
+        </ul>
+      </nav>
+
+    <pre class="al-snippet"><code>var populus = new Populus();
+
+populus.init({
+  <span id="api-target">target</span>: '<span class="string">data-populus-c</span>',
+  <span id="api-features">features</span>: {
+    <span id="api-features-wrapper">wrapper</span>: <span class="boolean">true</span>,
+    <span id="api-features-placeholder">placeholder</span>: '<span class="string">An other popvlvs instance</span>',
+    <span id="api-features-autofocus">autofocus</span>: <span class="boolean">false</span>,
+    <span id="api-features-updateValue">updateValue</span>: <span class="boolean">true</span>,
+    <span id="api-features-a11y">a11y</span>: {
+      <span id="api-features-a11y-label">label</span>: '<span class="string">Search more</span>',
+      <span id="api-features-a11y-outline">outline</span>: ['<span class="string">2px</span>', '<span class="string">dotted</span>', '<span class="string">lime</span>', '<span class="string">-5px</span>']
+    }
+  },
+
+  <span id="api-buttons">: {
+    <span id="api-buttons-search">search</span>: {
+      <span id="api-buttons-search-label">label</span>: '<span class="string">search</span>',
+      <span id="api-buttons-search-click">click</span>: '<span class="string">console.log("hey")</span>'
+    },
+    <span id="api-buttons-cancel">cancel</span>: {
+      <span id="api-buttons-cancel-label">label</span>: '<span class="string">or not</span>',
+      <span id="api-buttons-cancel-click">click</span>: '<span class="string">console.log("hooo")</span>'
+    }
+  }
+});</code></pre>
+
+
+      <div id="documentation" data-state="closed">
+        <a href="javascript:void(0)" onclick="this.parentNode.classList.remove('visible');closeDocumentations();">x</a>
+        <article id="documentation-target">
+          <header>
+            target
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, vel aut optio pariatur, debitis iste a. Doloribus voluptate reiciendis praesentium quam, similique unde, aliquam et, temporibus corrupti vero dolores fuga!</p>
+          <pre><code>target: 'data-populus-c'</code></pre>
+        </article>
+        <article id="#documentation-features-wrapper">
+          <header>
+            features.wrapper
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officia. Qui vero nemo aliquam, aliquid provident, libero minima, ad nulla quisquam non cupiditate placeat mollitia magnam rem iste dolor ab.</p>
+          <pre><code>wrapper: true</code></pre>
+        </article>
+        <article id="#documentation-features-placeholder">
+          <header>
+            features.placeholder
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illum ut voluptatum cumque quis quae blanditiis, aliquid, veritatis. Ad similique voluptate modi aperiam, iste ipsa ducimus accusamus harum laudantium voluptatibus.</p>
+          <pre><code>placeholder: 'An other popvlvs instance',</code></pre>
+        </article>
+        <article id="#documentation-features-autofocus">
+          <header>
+            features.autofocus
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sapiente consequuntur nisi saepe cupiditate, ratione voluptatibus quo, dolorem, quas porro aliquid perspiciatis assumenda nihil molestiae, accusamus animi ab esse id!</p>
+        </article>
+        <article id="#documentation-features-updateValue">
+          <header>
+            features.updateValue
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic veritatis dignissimos sequi quos cupiditate laboriosam excepturi ut perspiciatis. Sunt eius, aliquid possimus provident sapiente magni vero enim! Atque, voluptates.</p>
+        </article>
+        <article id="#documentation-features-a11y-label">
+          <header>
+            features.a11y.label
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quam hic, magnam quae magni voluptatem sint. Et cumque nihil mollitia omnis numquam expedita consectetur voluptatum provident minus, reprehenderit nobis consequatur!</p>
+        </article>
+        <article id="#documentation-features-a11y-outline">
+          <header>
+            features.a11y.outline
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nobis voluptatem, ex impedit magni eius sunt at placeat quibusdam adipisci, vero optio provident in. Quas ab architecto recusandae, dolores alias!</p>
+        </article>
+        <article id="#documentation-buttons-search-label">
+          <header>
+            buttons.search.label
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dicta asperiores maxime provident voluptatibus cumque nobis necessitatibus ad assumenda dolorum voluptates quidem, odit sint, aperiam explicabo quisquam placeat. Consequatur, inventore.</p>
+        </article>
+        <article id="#documentation-buttons-search-click">
+          <header>
+            buttons.search.click
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A error modi omnis labore maiores cum ex soluta tenetur, architecto accusamus aliquam blanditiis consequuntur dolorum odio? Esse, tempore ea odit aliquam.</p>
+        </article>
+        <article id="#documentation-buttons-cancel-label">
+          <header>
+            buttons.cancel.label
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint culpa quidem harum dolor recusandae. Explicabo harum distinctio non? Consectetur, consequatur, porro. Nesciunt nulla ad, delectus dolorum consequatur similique quia, obcaecati?</p>
+        </article>
+        <article id="#documentation-buttons-cancel-click">
+          <header>
+            buttons.cancel.click
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorum veritatis, necessitatibus esse minus iure. Natus illo, neque minus asperiores, minima iure. Reiciendis omnis commodi saepe consectetur natus dignissimos doloribus!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

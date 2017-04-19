@@ -1,0 +1,98 @@
+@import "modules/_settings.sass";
+@import "modules/_mixins";
+
+:root {
+  font-size: 18px;
+}
+
+@media (max-width: $screen-sm ) {
+  :root {
+    font-size: calc(3vw + 0.4vh / 2)
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  @include isRetina {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscaled;
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+html {
+  background: linear-gradient(to bottom right, #fff, rgba(247, 247, 255, 1.0));
+  counter-reset: section;
+}
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  float: left;
+  background: url('../images/populus-pattern-left.svg')no-repeat left top / 420px,
+              url('../images/populus-pattern-right.svg')no-repeat right top / 420px
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $algolia-blue;
+  position: relative;
+  display: inline-block;
+  font-family: 'Cinzel', Segoe,"Segoe UI",Optima,Candara,Calibri,Arial,sans-serif;
+
+  &:after {
+    left: inherit;
+    right: -50px;
+  }
+
+  &.colored {
+    color: $bittersweet;
+  }
+}
+
+
+
+h1 {
+    font-size: 36px;
+    line-height: 45px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 45px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* Won't be used here */
+
+h5 {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 26px;
+}
+

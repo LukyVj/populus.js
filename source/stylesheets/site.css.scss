@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@import "extends/normalize";
+@import "extends/colors";
+@import "extends/helpers";
+@import "modules/fonts";
+@import "components/buttons";
+@import "components/container";
+@import "components/hero";
+@import "components/lines";
+@import "components/code";
+@import "components/navigation";
+@import "components/sections";
+@import "components/api";
+@import "components/documentation";
+@import "base";
+
+
+h2 {
+  width: 100%;
+}
+h2:after {
+  // background: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 38 38\'><g fill=\'%23d8af1a\' fill-rule=\'evenodd\'><path d=\'M-9 23H9v4H-9z\'/><path d=\'M11 9v18H7V9zM31 9v18h-4V9z\'/><path d=\'M9 9h18v4H9zM27 23h18v4H27z\'/></g></svg>")repeat-x center center / 20px;
+  width: 100%;
+  height: 30px;
+  content: '';
+  display: block;
+
+}

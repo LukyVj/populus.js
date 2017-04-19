@@ -1,0 +1,9 @@
+.section
+  header
+    h2
+      counter-increment: section
+      list-style-type: upper-roman
+      display: inline-block
+
+      &:before
+        content: counter(section, upper-roman) ". "
