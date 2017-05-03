@@ -1,15 +1,58 @@
 .navigation
-	position: fixed
-	top: 0
-	left: 0
+	position: relative
+	width: 100%
 
 	ul
 		padding: 0
 		margin: 0
+		list-style: none
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		max-width: 70%
+		margin: auto
+		text-align: center
+		justify-content: space-around
+
 
 		li
 			padding: 0
 			margin: 0
+			flex: 0 1 30%
+			color: rgba(black, 0.3)
 
 			a
 				color: $alpha-color
+				text-decoration: none
+
+
+	&.pos-fixed
+		top: 0
+		left: 0
+		width: 100%
+		background: #fff
+		z-index: 10
+		padding: 26px 0
+		box-shadow: 0 10px 40px 0 rgba($bunting,0.07), 0 2px 9px 0 rgba($bunting,0.06)
+
+		ul
+			max-width: $max-container-width
+			margin: auto
+
+
+		li
+			color: rgba($theme-color, 0.3)
+			flex: 0 1 25%
+			a
+				color: $theme-color
+
+		.hidden
+			display: inline-block !important
+
+			.btn
+				padding: 0 16px
+				font-size: 14px
+				color: #fff
+
+		.spacer32
+			display: none

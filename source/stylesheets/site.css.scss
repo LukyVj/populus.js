@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import "base";
 @import "extends/normalize";
 @import "extends/colors";
 @import "extends/helpers";
@@ -13,7 +14,7 @@
 @import "components/sections";
 @import "components/api";
 @import "components/documentation";
-@import "base";
+@import "components/footer";
 
 
 h2 {

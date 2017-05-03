@@ -4,19 +4,23 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag :populus %>
   </head>
 
   <body class="<%= page_classes %>">
 
     <%= yield %>
-    <%= javascript_include_tag :populus %>
-    <%= javascript_include_tag :all %>
+
+    <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js"></script>
+    <script src="src/populus.js"></script>
+    <%= javascript_include_tag 'all' %>
+
   </body>
 </html>

@@ -1,6 +1,7 @@
 @import "modules/_settings.sass";
 @import "modules/_mixins";
 
+
 :root {
   font-size: 18px;
 }
@@ -16,6 +17,8 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 300;
 
   @include isRetina {
     -webkit-font-smoothing: antialiased;
@@ -37,8 +40,8 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   float: left;
-  background: url('../images/populus-pattern-left.svg')no-repeat left top / 420px,
-              url('../images/populus-pattern-right.svg')no-repeat right top / 420px
+  background: url('../images/populus-pattern-left.svg')no-repeat left top / 25vw,
+              url('../images/populus-pattern-right.svg')no-repeat right top 1.5vw/ 25vw
 }
 
 ul {
@@ -50,7 +53,7 @@ h1,h2,h3,h4,h5,h6 {
   color: $algolia-blue;
   position: relative;
   display: inline-block;
-  font-family: 'Cinzel', Segoe,"Segoe UI",Optima,Candara,Calibri,Arial,sans-serif;
+  font-family: 'Empiric Roman', 'Cinzel', Segoe,"Segoe UI",Optima,Candara,Calibri,Arial,sans-serif;
 
   &:after {
     left: inherit;

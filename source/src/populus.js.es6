@@ -1,15 +1,26 @@
+
 /**
  * Popvlvs 0.1
  * javascript toolbelt to populate search inputs
  *
  *
- * target = target [String] class / id / selector
+ * target = target [String] data-attribute used
  *
  * features.wrapper = [String] Class name of the wrapper
  *
  * features.placeholder = [String] Content of the placeholder
  *
  * features.autofocus = [boolean] should it be autofocused
+ *
+ * features.autocomplete = [boolean]  should it autocomplete
+ *
+ * features.autocorrect = [boolean]  should it autocorrect
+ *
+ * features.autocapitalize = [boolean]  should it autocapitalize
+ *
+ * features.spellcheck = [boolean]  should it do spellcheck
+ *
+ * features.required = [boolean]  should it be required
  *
  * features.updateValue = [boolean] Should the value attribute auto update
  *
@@ -36,11 +47,13 @@ class Populus {
     const features = args.features;
     const buttons = args.buttons;
     const wrapper = args.wrapper;
+    const algoliaIs = args.algolia;
 
     target.forEach( (popInput, index) => {
 
       // Identify the inputs
       popInput.id = args.target+ '-' + index;
+      popInput.classList.add('populus--input');
 
       // If wrapper = true
       // Wrap the input in a div
@@ -67,7 +80,32 @@ class Populus {
         popInputTarget.focus()
       }
 
-      // If autofocus
+      // If autocomplete
+      if (features.autocomplete) {
+        popInputTarget.setAttribute('autocomplete', 'true')
+      }
+
+      // If autocorrect
+      if (features.autocorrect) {
+        popInputTarget.setAttribute('autocorrect', 'true')
+      }
+
+      // If autocapitalize
+      if (features.autocapitalize) {
+        popInputTarget.setAttribute('autocapitalize', 'true')
+      }
+
+      // If spellcheck
+      if (features.spellcheck) {
+        popInputTarget.setAttribute('spellcheck', 'true')
+      }
+
+      // If required
+      if (features.required) {
+        popInputTarget.setAttribute('required', 'required')
+      }
+
+      // If Update Value
       if (features.updateValue) {
         popInputTarget.addEventListener('input', e => {
           popInputTarget.setAttribute('value', e.target.value)
@@ -121,22 +159,37 @@ class Populus {
       if (buttons) {
         if ( buttons.search) {
           let searchButton = document.createElement('button');
-          searchButton.classList.add('populus--search-button');
+          searchButton.classList.add('populus--button','populus--button-search');
           searchButton.innerHTML = buttons.search.label
           popInputTarget.parentNode.appendChild(searchButton)
 
-          searchButton.setAttribute('onClick',  buttons.search.click);
+          searchButton.setAttribute('onClick',  buttons.search.onClick);
         }
 
         if ( buttons.cancel) {
           let cancelButton = document.createElement('button');
-          cancelButton.classList.add('populus--cancel-button');
+          cancelButton.classList.add('populus--button','populus--button-cancel');
           cancelButton.innerHTML = buttons.cancel.label
           popInputTarget.parentNode.appendChild(cancelButton)
 
-          cancelButton.setAttribute('onClick',  buttons.cancel.click);
+          cancelButton.setAttribute('onClick',  buttons.cancel.onClick);
         }
       }
+
+      // Algolia Feature
+      // For V2
+      // if (algoliaIs) {
+      //   const alIsAppId = algoliaIs.appId;
+      //   const alIsApiKey = algoliaIs.apiKey;
+      //   const alIsIndexName = algoliaIs.indexName;
+
+      //   let AlgoliaSearch = instantsearch({
+      //     appId: alIsAppId,
+      //     apiKey: alIsApiKey,
+      //     indexName: alIsIndexName,
+      //     urlSync: true
+      //   });
+      // }
     });
 
   }

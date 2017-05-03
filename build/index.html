@@ -4,286 +4,290 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Admexia</title>
+    <title>POPULUS.js</title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
     <link href="/stylesheets/site.css" rel="stylesheet" />
-    <script src="/javascripts/bideo.js"></script>
-    <script src="/javascripts/all.js"></script>
+    <link href="/stylesheets/populus.css" rel="stylesheet" />
   </head>
 
   <body class="index">
 
-    <div class="nav">
-	<div class="am-container">
-	<!-- 	<div class="brand">
-			ADMEXIA
-		</div> -->
+    <div class="container">
+  <div class="hero text-center p-xlarge">
+    <header class="m100p">
+      <span>🌿</span>
+      <h1 class="w100p inline">POPULUS</h1>
+      <h3>Small javascript toolbelt to populate search inputs</h3>
 
-		<ul class="fn">
-			<li><a href="#Accueil">Accueil</a></li>
-			<li><a href="#CessionAcquisition">Cession Acquisition</a></li>
-			<li><a href="#footer">Contact</a></li>
-		</ul>
-	</div>
+      <div class="p-xlarge">
+
+        <a href="/src/populus.js" class="btn btn-static-theme btn-shadow">Download POPULUS.JS (2kb) </a>
+
+      </div>
+
+      <nav class="navigation" id="nav">
+        <div class="spacer32"></div>
+        <ul>
+          <li>[ <a href="#intro">Introduction</a> ]</li>
+          <li>[ <a href="#demo">Demonstration</a> ]</li>
+          <li>[ <a href="#api">Api docs</a> ]</li>
+
+          <li class="hidden">
+            <a href="/src/populus.js" class="btn btn-static-theme btn-shadow">Download (2kb) </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+  </div>
+
+  <span class="line"></span>
+
+  <section class="section p-xlarge text-center" id="intro">
+    <p>It's often bothering, if not difficult to set up a small demo using a text or a search input. Depending what you want to achieve, you have to set up the submit buttons, the clear buttons, the update of the value of the input, accessibility, etc. </p>
+    <p>That's why POPULUS was born, it was made to help you setting up complete text input, to build demos and expreriments faster!.</p>
+  </section>
+
+  <span class="line"></span>
+
+  <section class="section section-demo p-xlarge" id="demo">
+    <header>
+      <h2>Demo</h2>
+    </header>
+
+    <pre><code>&lt;input type="text"></code></pre>
+    <!-- Populus demo -->
+    <input type="search">
+
+
+    <pre><code>&lt;input type="text" data-populus></code></pre>
+    <!-- Populus demo -->
+
+    <input type="search" data-populus-a>
+
+
+  </section>
+
+  <span class="line"></span>
+
+  <section class="section section-api p-xlarge" id="api">
+    <header>
+      <h2>API</h2>
+    </header>
+
+    <div id="api">
+      <nav>
+        <!-- <h3>Api documentation</h3> -->
+        <ul>
+          <li><a href="#documentation-target">target</a></li>
+          <li><a href="#documentation-features-wrapper">features.wrapper</a></li>
+          <li><a href="#documentation-features-placeholder">features.placeholder</a></li>
+          <li><a href="#documentation-features-autocomplete">fetures.autocomplete</a></li>
+          <li><a href="#documentation-features-autocorrect">fetures.autocorrect</a></li>
+          <li><a href="#documentation-features-autocapitalize">fetures.autocapitalize</a></li>
+          <li><a href="#documentation-features-spellcheck">fetures.spellcheck</a></li>
+          <li><a href="#documentation-features-required">fetures.required</a></li>
+          <li><a href="#documentation-features-autofocus">features.autofocus</a></li>
+          <li><a href="#documentation-features-updateValue">features.updateValue</a></li>
+          <li><a href="#documentation-features-a11y-label">features.a11y.label</a></li>
+          <li><a href="#documentation-features-a11y-outline">features.a11y.outline</a></li>
+          <li><a href="#documentation-buttons-search-label">buttons.search.label</a></li>
+          <li><a href="#documentation-buttons-search-click">buttons.search.click</a></li>
+          <li><a href="#documentation-buttons-cancel-label">buttons.cancel.label</a></li>
+          <li><a href="#documentation-buttons-cancel-click">buttons.cancel.click</a></li>
+        </ul>
+      </nav>
+
+    <pre class="al-snippet"><code>var populus = new Populus();
+
+populus.init({
+  <span id="api-target">target</span>: <span class="string">'[data-populus-c]'</span>,
+  <span id="api-features">features</span>: {
+    <span id="api-features-wrapper">wrapper</span>: <span class="boolean">true</span>,
+    <span id="api-features-placeholder">placeholder</span>: '<span class="string">An other POPULUS instance</span>',
+    <span id="api-features-autocomplete">autocomplete</span>: <span class="boolean">true</span>,
+    <span id="api-features-autocorrect">autocorrect</span>: <span class="boolean">true</span>,
+    <span id="api-features-autocapitalize">autocapitalize</span>: <span class="boolean">true</span>,
+    <span id="api-features-spellcheck">spellcheck</span>: <span class="boolean">true</span>,
+    <span id="api-features-required">required</span>: <span class="boolean">true</span>,
+    <span id="api-features-autofocus">autofocus</span>: <span class="boolean">false</span>,
+    <span id="api-features-updateValue">updateValue</span>: <span class="boolean">true</span>,
+    <span id="api-features-a11y">a11y</span>: {
+      <span id="api-features-a11y-label">label</span>: <span class="string">'Search more'</span>,
+      <span id="api-features-a11y-outline">outline</span>: [<span class="string">'2px'</span>, <span class="string">'dotted'</span>, <span class="string">'lime'</span>, <span class="string">'-5px'</span>]
+    }
+  },
+
+  <span id="api-buttons">buttons: {
+    <span id="api-buttons-search">search</span>: {
+      <span id="api-buttons-search-label">label</span>: <span class="string">'search'</span>,
+      <span id="api-buttons-search-click">onClick</span>: <span class="string">'console.log("hey")'</span>
+    },
+    <span id="api-buttons-cancel">cancel</span>: {
+      <span id="api-buttons-cancel-label">label</span>: <span class="string">'or not'</span>,
+      <span id="api-buttons-cancel-click">onClick</span>: <span class="string">'console.log("hooo")'</span>
+    }
+  }
+});</code></pre>
+
+
+      <div id="documentation" data-state="closed">
+        <article id="documentation-target">
+          <header>
+            <h3>target</h3>
+          </header>
+          <p>The attribute  to target  </p>
+          <pre><code>target: <span class="string">'data-populus-c'</span></code></pre>
+        </article>
+        <article id="documentation-features-wrapper">
+          <header>
+            <h3>features.wrapper</h3>
+          </header>
+          <p>If true, it will wrap the Populus input with a <code>&lt;div class="populus--wrapper">&gt;div></code></p>
+          <pre><code>features.wrapper: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-placeholder">
+          <header>
+            <h3>features.placeholder</h3>
+          </header>
+          <p>The placeholder of the input</p>
+          <pre><code>features.placeholder: <span class="string">'An other POPULUS instance'</span>,</code></pre>
+        </article>
+        <article id="documentation-features-autocomplete">
+          <header>
+            <h3>features.autocomplete</h3>
+
+            <span class="info">mobile</span>
+          </header>
+          <p>Enable / disable autocomplete</p>
+          <pre><code>features.autocomplete: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-autocorrect">
+          <header>
+            <h3>features.autocorrect</h3>
+
+            <span class="info">mobile</span>
+          </header>
+          <p>Enable / Disable autocorrect</p>
+
+          <pre><code>features.autocorrect: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-autocapitalize">
+          <header>
+            <h3>features.autocapitalize</h3>
+
+            <span class="info">Safari / iOs</span>
+          </header>
+          <p>Enable / disable autocapitalize.</p>
+
+          <pre><code>afeatures.utocapitalize: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-spellcheck">
+          <header>
+            <h3>features.spellcheck</h3>
+
+            <span class="info">Mobile / Safari / iOs</span>
+          </header>
+          <p>Enable / disable Spellcheck</p>
+
+          <pre><code>features.spellcheck: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-required">
+          <header>
+            <h3>features.required</h3>
+          </header>
+          <p>If true, the input will be required</p>
+
+          <pre><code>features.required: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-autofocus">
+          <header>
+            <h3>features.autofocus</h3>
+          </header>
+          <p>If true, the input will be auto focused on page load.</p>
+
+          <pre><code>features.autofocus: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-updateValue">
+          <header>
+            <h3>features.updateValue</h3>
+          </header>
+          <p>If true, the value of the input will be updated s you type</p>
+
+          <pre><code>features.updateValue: <span class="boolean">true</span></code></pre>
+        </article>
+        <article id="documentation-features-a11y-label">
+          <header>
+            <h3>features.a11y.label</h3>
+          </header>
+          <p>Add <code>aria-label</code>, <code>name</code> and <code>title</code> attribute to the input</p>
+
+          <pre><code>a11y.label: <span class="string">'search input'</span></code></pre>
+        </article>
+        <article id="documentation-features-a11y-outline">
+          <header>
+            <h3>features.a11y.outline</h3>
+          </header>
+          <p>Add outline for accessibility</p>
+          <ul>
+            <li>1: Outline width</li>
+            <li>2: Outline type</li>
+            <li>3: Outline color</li>
+            <li>4: Outline offset ( optional ) </li>
+          </ul>
+
+          <pre><code>a11y.outline: [<span class="string">'2px'</span>, <span class="string">'solid'</span>, <span class="string">'blue'</span>, <span class="string">'-2px'</span>]</code></pre>
+        </article>
+        <article id="documentation-buttons-search-label">
+          <header>
+            <h3>buttons.search.label</h3>
+          </header>
+          <p>The text / html into the search button.</p>
+
+          <pre><code>buttons.search.label: <span class="string">'Search!'</span>,</code></pre>
+        </article>
+        <article id="documentation-buttons-search-click">
+          <header>
+            <h3>buttons.search.click</h3>
+          </header>
+          <p>The js executed on click on the search button.</p>
+
+          <pre><code>buttons.search.onClick: <span class="string">'this.parentNode.childNodes[0].focus()'</span></code></pre>
+        </article>
+        <article id="documentation-buttons-cancel-label">
+          <header>
+            <h3>buttons.cancel.label</h3>
+          </header>
+          <p>The text / html into the cancel button.</p>
+
+          <pre><code>buttons.cancel.label: <span class="string">'cancel'</span>,</code></pre>
+        </article>
+        <article id="documentation-buttons-cancel-click">
+          <header>
+            <h3>buttons.cancel.click</h3>
+          </header>
+          <p>The js executed on click on the cancel button.</p>
+
+          <pre><code>buttons.cancel.onClick: <span class="string">'this.parentNode.childNodes[0].value=""'</span></code></pre>
+        </article>
+      </div>
+    </div>
+  </section>
 </div>
 
+<footer class="text-center">
 
-<div class="hero-header" id="header">
-	<div class="hero-content">
-		<h1 id="title"><span>A</span><span>d</span><span>m</span><span>e</span><span>x</span><span>i</span><span>a</span><br/><small>FUSACQ</small></h1>
-		<h2>Cabinet de conseil indépendant de rapprochement et de transmission d'entreprises dans le secteur des services IT, du digital, des infrastructures et du numérique.</h2>
-	</div>
+  <p>Tiny project made by <a href="https://twitter.com/LukyVj">@LukyVj</a> - Design by <a href="https://twitter.com/Auareyou">@Auareyou</a></p>
 
-	<a href="#" class="scroll-down"><svg><use xlink:href="#arrow-down"></svg></a>
-</div>
+</footer>
 
-
-
-<div class="section details-section">
-	<div class="am-container">
-		<header>
-			<h3>MISSIONS D'ÉTUDE D'ENTREPRISES</h3>
-		</header>
-		<div class="content zi-10 flex item-holder">
-			<div class="item">
-				<header>
-					<img src="images/strategy-icon.svg"/>
-					<p>Rédaction de projets stratégiques</p>
-					<!-- <p>Étude et rédaction du projet stratégique en collaboration avec les dirigeants de l'entreprise.</p> -->
-				</header>
-			</div>
-			<div class="item">
-				<header>
-					<img src="images/magnifying-glass-icon.svg"/>
-					<p>Dossiers d'évaluation</p>
-					<!-- <p>Prestation d'analyse stratégique et financière, préalable à l'évaluation de l'entreprise.</p> -->
-				</header>
-			</div>
-			<div class="item">
-				<header>
-					<img src="images/meeting-icon.svg"/>
-					<p>Coaching dirigeant d’entreprise</p>
-					<!-- <p><span class="tc"><span class="bold">FUSION</span>, <span class="bold">CESSION</span>, <span class="bold">ACQUISITION</span></span> <br/> d'entreprises de services du numérique. <br>Le champ d'intervention du cabinet concerne les opérations de haut de bilan.</p> -->
-				</header>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-
-<div class="section important-section mv10" id="CessionAcquisition">
-	<div class="am-container">
-		<div class="content zi-10">
-			<header>
-				<h3>Conseil d'operations <br/>& Transmission d'entrreprise</h3>
-			</header>
-
-			<div class="content zi-10 flex item-holder">
-				<div class="item">
-					<header>
-						<a href="#fusion" class="btn btn-static-dark "><span>Fusion</span> <img src="images/arrow-right.svg" alt=""></a>
-						<!-- <p>Étude et rédaction du projet stratégique en collaboration avec les dirigeants de l'entreprise.</p> -->
-					</header>
-				</div>
-				<div class="item">
-					<header>
-						<a href="#cession" class="btn btn-static-dark "><span>Cession</span> <img src="images/arrow-right.svg" alt=""></a>
-						<!-- <p>Prestation d'analyse stratégique et financière, préalable à l'évaluation de l'entreprise.</p> -->
-					</header>
-				</div>
-				<div class="item">
-					<header>
-						<a href="#acquisition" class="btn btn-static-dark "><span>Acquisition</span> <img src="images/arrow-right.svg" alt=""></a>
-						<!-- <p><span class="tc"><span class="bold">FUSION</span>, <span class="bold">CESSION</span>, <span class="bold">ACQUISITION</span></span> <br/> d'entreprises de services du numérique. <br>Le champ d'intervention du cabinet concerne les opérations de haut de bilan.</p> -->
-					</header>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="section definition-section mv10" id="cession">
-	<div class="am-container">
-		<div class="content zi-10">
-			<header>
-				<h3>Opération de cession de l’entreprise</h3>
-			</header>
-
-			<div class="content zi-10 flex item-holder card-holder">
-				<div class="card-item">
-				<header>
-					<h3>Phase init <br/><small>( 3 / 6 mois )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Analyse du dossier de cession force faiblesse </li>
-						<li>valorisation de l’entreprise </li>
-						<li>Redaction du teaser et du memorandum </li>
-						<li>diffusion du teaser </li>
-						<li>remise du mémorandum au cessionnaires après signature NDA </li>
-					</ul>
-				</section>
-			</div>
-			<div class="card-item">
-				<header>
-					<h3>Phase de négociation <br/><small>( 2/ 4 mois )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Gestion cal rdv </li>
-						<li>Présentation des parties </li>
-						<li>Validation enjeux cédant et acquéreur </li>
-						<li>Confrontation des stratégies cédant et acquéreur </li>
-						<li>Conseil sur LOI acquéreur </li>
-						<li>Conseil dans la phase des due diligences</li>
-					</ul>
-				</section>
-			</div>
-			<div class="card-item">
-				<header>
-					<h3>Phase de closing <br/><small>( 2 mois max )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Accompagnement du dirigeant cédant, aux actes de cession finaux.</li>
-						<li>Accompagnement au closing de l’opération</li>
-						<li>Accompagnement à la signature du protocole d’accord et déblocage des fonds </li>
-					</ul>
-				</section>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="section definition-section acquisition-section" id="acquisition">
-	<div class="am-container">
-		<div class="content zi-10">
-			<header>
-				<h3>Opération d’acquisition de l’entreprise</h3>
-			</header>
-
-			<div class="content zi-10 flex item-holder card-holder">
-				<div class="card-item">
-				<header>
-					<h3>Phase init <br/><small>( 3 / 6 mois )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Validation du projet stratégique de croissance</li>
-						<li>Ciblage des sociétés à approcher </li>
-						<li>Analyse de l’adéquation entre cédant et acquéreur </li>
-						<li>Validation de la dynamique d’acquisition</li>
-					</ul>
-				</section>
-			</div>
-			<div class="card-item">
-				<header>
-					<h3>Phase de négociation <br/><small>( 3 / 4 mois )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Gestion calendrier présentation des dirigeants</li>
-						<li>Confrontation stratégie des dirigeants cédants et acquéreur </li>
-						<li>Validation enjeux cédant et acquéreur </li>
-						<li>Rédaction LOI par l’acquéreur </li>
-						<li>Accompagnement dans la phase des due diligence</li>
-					</ul>
-				</section>
-			</div>
-			<div class="card-item">
-				<header>
-					<h3>Phase de closing <br/><small>( 2 mois max )</small></h3>
-				</header>
-				<section>
-					<ul>
-						<li>Accompagnement du dirigeant acquéreur, aux actes d’acquisition finaux.</li>
-						<li>Accompagnement au closing de l’opération</li>
-						<li>Accompagnement à la signature du protocole d’accord.</li>
-					</ul>
-				</section>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section process-section" id="fusion">
-	<div class="am-container">
-		<header>
-			<h3>Process d’operations de transmission d’entreprise : </h3>
-		</header>
-		<div class="content zi-10 flex item-holder card-holder arrows">
-			<div class="item card-timeline">
-				<header>
-					<img src="images/validation-icon.svg"/>
-				</header>
-				<section>
-					<h4>Validation de l’offre du cabinet admexia</h4>
-				</section>
-			</div>
-			<div class="item card-timeline">
-				<header>
-					<img src="images/ceo-icon.svg"/>
-				</header>
-				<section>
-					<h4>Rencontre du dirigeant et du conseil admexia</h4>
-				</section>
-			</div>
-			<div class="item card-timeline">
-				<header>
-					<img src="images/contract-icon.svg"/>
-				</header>
-				<section>
-					<h4>Signature de lettre de mission et du mandat de cession ( et d’acquisition ) </h4>
-				</section>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="footer" id="footer">
-	<div class="col">
-		<p>625 Route d'Aix 13510 Eguilles</p>
-		<p class="prot"><svg height="30" width="200">
-			<text x="0" y="15" fill="#fff">serge.bonomi@admexia.fr</text>
-			Sorry, your browser does not support inline SVG.
-		</svg></p>
-		<p class="prot"><svg height="30" width="200">
-			<text x="0" y="15" fill="#fff">(0)6 59 09 35 27</text>
-			Sorry, your browser does not support inline SVG.
-		</svg></p>
-	</div>
-
-	<div class="col">
-		<p class="twitter"><a href="https://twitter.com/admexia"> <img src="images/twitter.svg" alt="">@admexia</a></p>
-		<p class="linkedin"><a href="https://www.linkedin.com/in/serge-bonomi-76512663"> <img src="images/linkedin2.svg" alt="">Serge Bonomi</a></p>
-	</div>
-
-	<div class="col">
-		<p>Le cabinet ADMEXIA,  est membre de l'association professionnelle ACIFTE agréée AMF, pour la partie Transmission Entreprise.
-			<br>Statut de CIF | immatriculé à l'ORIAS n° 16002693
-			<br>Assuré en RCP MMA IARD n°114.231.842
-			<br>N° SIRET : 502 422 025</p>
-		</div>
-</div>
-
-
-  <svg style="display: none;">
-  	<defs>
-  		<symbol id="arrow-down" viewBox="0 0 100 125"><g fill-rule="evenodd"> <rect x="47" y="22" width="6" height="56" rx="3"/> <rect transform="rotate(-45 39.418 67.39)" x="36.41835" y="50" width="6" height="34.78125" rx="3"/> <rect transform="rotate(45 60.418 67.39)" x="57.41835" y="50" width="6" height="34.78125" rx="3"/> </g> </symbol>
-  	</defs>
-  </svg>
+    <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js"></script>
+    <script src="src/populus.js"></script>
+    <script src="/javascripts/all.js"></script>
 
   </body>
 </html>

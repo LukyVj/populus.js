@@ -1,12 +1,44 @@
 #documentation
-	position: absolute
-	overflow: auto
+  width: 100%
 
-	background: #fff
-	padding: 1em
-	visibility: hidden
-	display: none
+  h3
+    &:before
+      content: '🌿 '
 
-	article
-		visibility: hidden
-		display: none
+  article
+    width: 100%
+    display: inline-block
+    padding: 1em
+    border: 1px solid rgb(245, 230, 176)
+    border-radius: 6px
+    margin-bottom: 1em
+    position: relative
+
+    &:target
+      animation: imHere 0.5s ease
+
+    ul
+      list-style: none
+      padding: 0
+      color: rgba(#2C2C2E, 0.60)
+      line-height: 24px
+      font-size: 16px
+
+  pre
+    width: 100%
+
+
+@keyframes imHere
+  from
+    background: yellow
+
+  to
+    background: rgba(white, 0)
+
+span.info
+  font-size: 12px
+  padding: 1em
+  background: rgba(216, 175, 26, 0.15)
+  font-weight: 300
+  color: rgba(black, 0.6)
+  border-radius: 6px

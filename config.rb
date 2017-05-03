@@ -1,3 +1,11 @@
+require 'sprockets/es6'
+
+# Enable ES6 parsing
+require 'sprockets/es6'
+activate :sprockets do |config|
+  config.supported_output_extensions << '.es6'
+end
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -17,7 +25,12 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
-
+# ::Sprockets::ES6.configure do |config|
+#   config.marshal_load({
+#     modules: 'amd',
+#     moduleIds: true
+#   })
+# end
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -34,11 +47,12 @@ end
 #   end
 # end
 
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end
