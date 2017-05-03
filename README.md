@@ -24,6 +24,10 @@ Thanks to @auareyou for the design and the precious advices and help
 
 
 ### Development
-- clone the repo
-- `cd path/to/popvlvs`
-- `middleman`
+
+```sh
+$ git clone https://github.com/LukyVj/POPVLVS.js
+$ cd POPVLVS.js
+$ bundle install
+$ bundle exec middleman
+```
