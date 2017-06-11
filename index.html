@@ -10,8 +10,8 @@
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
-    <link href="stylesheets/site.css" rel="stylesheet" />
-    <link href="stylesheets/populus.css" rel="stylesheet" />
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <link href="/stylesheets/populus.css" rel="stylesheet" />
   </head>
 
   <body class="index">
@@ -27,11 +27,11 @@
     <header class="m100p">
       <span class="text-xxl">🌿</span>
       <h1 class="w100p inline">POPULUS</h1>
-      <h3>Small javascript toolbelt to populate search inputs</h3>
+      <h3>Small JavaScript toolbelt to populate search inputs</h3>
 
       <div class="p-xlarge">
 
-        <a href="src/populus.js" class="btn btn-static-theme btn-shadow" title="Download source file">Download POPULUS.JS (2kb) </a>
+        <a href="/src/populus.js" class="btn btn-static-theme btn-shadow" title="Download source file">Download POPULUS.JS (2kb) </a>
 
       </div>
 
@@ -40,10 +40,10 @@
         <ul>
           <li>[ <a href="#intro">Introduction</a> ]</li>
           <li>[ <a href="#demo">Demonstration</a> ]</li>
-          <li>[ <a href="#api">Api docs</a> ]</li>
+          <li>[ <a href="#api">API docs</a> ]</li>
 
           <li class="hidden">
-            <a href="src/populus.js" class="btn btn-static-theme btn-shadow" title="Download source file">Download (2kb) </a>
+            <a href="/src/populus.js" class="btn btn-static-theme btn-shadow" title="Download source file">Download (2kb) </a>
           </li>
         </ul>
       </nav>
@@ -54,8 +54,8 @@
   <span class="line"></span>
 
   <section class="section p-xlarge text-center" id="intro">
-    <p>It's often bothering, if not difficult to set up a small demo using a text or a search input. Depending what you want to achieve, you have to set up the submit buttons, the clear buttons, the update of the value of the input, accessibility, etc. </p>
-    <p>That's why POPULUS was born, it was made to help you setting up complete text input, to build demos and expreriments faster!.</p>
+    <p>It's often bothering, if not difficult to set up a small demo using a text or a search input. Depending on what you want to achieve, you have to set up the submit buttons, the clear buttons, the update of the value of the input, accessibility, etc. </p>
+    <p>That's why POPULUS was born, it was made to help you setting up complete text inputs to build demos and experiments faster!</p>
   </section>
 
   <span class="line"></span>
@@ -114,7 +114,7 @@ populus.init({
   <span id="api-target">target</span>: <span class="string">'[data-populus-c]'</span>,
   <span id="api-features">features</span>: {
     <span id="api-features-wrapper">wrapper</span>: <span class="boolean">true</span>,
-    <span id="api-features-placeholder">placeholder</span>: '<span class="string">An other POPULUS instance</span>',
+    <span id="api-features-placeholder">placeholder</span>: '<span class="string">Another POPULUS instance</span>',
     <span id="api-features-autocomplete">autocomplete</span>: <span class="boolean">true</span>,
     <span id="api-features-autocorrect">autocorrect</span>: <span class="boolean">true</span>,
     <span id="api-features-autocapitalize">autocapitalize</span>: <span class="boolean">true</span>,
@@ -146,14 +146,14 @@ populus.init({
           <header>
             <h3>target</h3>
           </header>
-          <p>The attribute  to target  </p>
+          <p>The attribute to target</p>
           <pre><code>target: <span class="string">'data-populus-c'</span></code></pre>
         </article>
         <article id="documentation-features-wrapper">
           <header>
             <h3>features.wrapper</h3>
           </header>
-          <p>If true, it will wrap the Populus input with a <code>&lt;div class="populus--wrapper">&gt;div></code></p>
+          <p>If true, it will wrap the Populus input with a <code>&lt;div class="populus--wrapper">&gt;div></code>.</p>
           <pre><code>features.wrapper: <span class="boolean">true</span></code></pre>
         </article>
         <article id="documentation-features-placeholder">
@@ -161,7 +161,7 @@ populus.init({
             <h3>features.placeholder</h3>
           </header>
           <p>The placeholder of the input</p>
-          <pre><code>features.placeholder: <span class="string">'An other POPULUS instance'</span>,</code></pre>
+          <pre><code>features.placeholder: <span class="string">'Another POPULUS instance'</span>,</code></pre>
         </article>
         <article id="documentation-features-autocomplete">
           <header>
@@ -169,7 +169,7 @@ populus.init({
 
             <span class="info">mobile</span>
           </header>
-          <p>Enable / disable autocomplete</p>
+          <p>Enable/disable autocompletion</p>
           <pre><code>features.autocomplete: <span class="boolean">true</span></code></pre>
         </article>
         <article id="documentation-features-autocorrect">
@@ -178,7 +178,7 @@ populus.init({
 
             <span class="info">mobile</span>
           </header>
-          <p>Enable / Disable autocorrect</p>
+          <p>Enable/Disable autocorrection</p>
 
           <pre><code>features.autocorrect: <span class="boolean">true</span></code></pre>
         </article>
@@ -186,9 +186,9 @@ populus.init({
           <header>
             <h3>features.autocapitalize</h3>
 
-            <span class="info">Safari / iOs</span>
+            <span class="info">Safari/iOS</span>
           </header>
-          <p>Enable / disable autocapitalize.</p>
+          <p>Enable/disable autocapitalize.</p>
 
           <pre><code>afeatures.utocapitalize: <span class="boolean">true</span></code></pre>
         </article>
@@ -196,9 +196,9 @@ populus.init({
           <header>
             <h3>features.spellcheck</h3>
 
-            <span class="info">Mobile / Safari / iOs</span>
+            <span class="info">Mobile/Safari/iOS</span>
           </header>
-          <p>Enable / disable Spellcheck</p>
+          <p>Enable/disable spell-checking</p>
 
           <pre><code>features.spellcheck: <span class="boolean">true</span></code></pre>
         </article>
@@ -206,7 +206,7 @@ populus.init({
           <header>
             <h3>features.required</h3>
           </header>
-          <p>If true, the input will be required</p>
+          <p>If true, the input will be required.</p>
 
           <pre><code>features.required: <span class="boolean">true</span></code></pre>
         </article>
@@ -214,7 +214,7 @@ populus.init({
           <header>
             <h3>features.autofocus</h3>
           </header>
-          <p>If true, the input will be auto focused on page load.</p>
+          <p>If true, the input will be auto-focused on page load.</p>
 
           <pre><code>features.autofocus: <span class="boolean">true</span></code></pre>
         </article>
@@ -222,7 +222,7 @@ populus.init({
           <header>
             <h3>features.updateValue</h3>
           </header>
-          <p>If true, the value of the input will be updated s you type</p>
+          <p>If true, the value of the input will be updated as you type.</p>
 
           <pre><code>features.updateValue: <span class="boolean">true</span></code></pre>
         </article>
@@ -230,7 +230,7 @@ populus.init({
           <header>
             <h3>features.a11y.label</h3>
           </header>
-          <p>Add <code>aria-label</code>, <code>name</code> and <code>title</code> attribute to the input</p>
+          <p>Add the <code>aria-label</code>, <code>name</code> and <code>title</code> attributes to the input</p>
 
           <pre><code>a11y.label: <span class="string">'search input'</span></code></pre>
         </article>
@@ -243,7 +243,7 @@ populus.init({
             <li>1: Outline width</li>
             <li>2: Outline type</li>
             <li>3: Outline color</li>
-            <li>4: Outline offset ( optional ) </li>
+            <li>4: Outline offset (optional)</li>
           </ul>
 
           <pre><code>a11y.outline: [<span class="string">'2px'</span>, <span class="string">'solid'</span>, <span class="string">'blue'</span>, <span class="string">'-2px'</span>]</code></pre>
@@ -252,7 +252,7 @@ populus.init({
           <header>
             <h3>buttons.search.label</h3>
           </header>
-          <p>The text / html into the search button.</p>
+          <p>The text/html of the search button</p>
 
           <pre><code>buttons.search.label: <span class="string">'Search!'</span>,</code></pre>
         </article>
@@ -260,7 +260,7 @@ populus.init({
           <header>
             <h3>buttons.search.click</h3>
           </header>
-          <p>The js executed on click on the search button.</p>
+          <p>The JS executed when clicking on the search button</p>
 
           <pre><code>buttons.search.onClick: <span class="string">'this.parentNode.childNodes[0].focus()'</span></code></pre>
         </article>
@@ -268,7 +268,7 @@ populus.init({
           <header>
             <h3>buttons.cancel.label</h3>
           </header>
-          <p>The text / html into the cancel button.</p>
+          <p>The text/html of the cancel button</p>
 
           <pre><code>buttons.cancel.label: <span class="string">'cancel'</span>,</code></pre>
         </article>
@@ -276,7 +276,7 @@ populus.init({
           <header>
             <h3>buttons.cancel.click</h3>
           </header>
-          <p>The js executed on click on the cancel button.</p>
+          <p>The JS executed when clicking on the cancel button</p>
 
           <pre><code>buttons.cancel.onClick: <span class="string">'this.parentNode.childNodes[0].value=""'</span></code></pre>
         </article>
@@ -291,9 +291,10 @@ populus.init({
 
 </footer>
 
+
     <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js"></script>
     <script src="src/populus.js"></script>
-    <script src="javascripts/all.js"></script>
+    <script src="/javascripts/all.js"></script>
 
   </body>
 </html>
