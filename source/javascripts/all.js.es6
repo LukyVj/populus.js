@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
     target: 'data-populus-a',
     features: {
       wrapper: true,
-      placeholder: 'Abemvs Popvlvs',
+      placeholder: 'Habemvs Popvlvs',
       autofocus: false,
       autocomplete: true,
       autocorrect: true,
@@ -83,6 +83,3 @@ document.addEventListener('DOMContentLoaded', function(){
     },
   });
 });
-
-
-
