@@ -47,7 +47,6 @@ class Populus {
     const features = args.features;
     const buttons = args.buttons;
     const wrapper = args.wrapper;
-    const algoliaIs = args.algolia;
 
     target.forEach( (popInput, index) => {
 
@@ -175,21 +174,6 @@ class Populus {
           cancelButton.setAttribute('onClick',  buttons.cancel.onClick);
         }
       }
-
-      // Algolia Feature
-      // For V2
-      // if (algoliaIs) {
-      //   const alIsAppId = algoliaIs.appId;
-      //   const alIsApiKey = algoliaIs.apiKey;
-      //   const alIsIndexName = algoliaIs.indexName;
-
-      //   let AlgoliaSearch = instantsearch({
-      //     appId: alIsAppId,
-      //     apiKey: alIsApiKey,
-      //     indexName: alIsIndexName,
-      //     urlSync: true
-      //   });
-      // }
     });
 
   }
