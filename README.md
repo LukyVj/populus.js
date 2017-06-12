@@ -21,6 +21,10 @@ I'm working at Algolia, and well, we are really (like really really) into search
 I'm building demos, POC, and examples all the time, and I can tell you, the time I'm losing when I have to make a complete input experience is precious.
 Now, with Populus.js, I'm able to save that precious time \o/
 
+### Demo
+https://codepen.io/LukyVj/pen/eRZeEK/
+See the Pen <a href="https://codepen.io/LukyVj/pen/eRZeEK/">eRZeEK</a> by LukyVJ (<a href="https://codepen.io/LukyVj">@LukyVj</a>) on <a href="https://codepen.io">CodePen</a>.
+
 
 ### Thanks
 Thanks to @auareyou for the design and the precious advices and help.
