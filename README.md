@@ -27,7 +27,7 @@ See the Pen <a href="https://codepen.io/LukyVj/pen/eRZeEK/">eRZeEK</a> by LukyVJ
 
 
 ### Thanks
-Thanks to <a href="https://www.github.com/auareyou_algolia">@auareyou</a> for the design and the precious advices and help.
+Thanks to <a href="https://www.github.com/auareyou">@auareyou</a> for the design and the precious advices and help.
 
 
 ### Development
