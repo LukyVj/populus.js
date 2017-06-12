@@ -1,5 +1,7 @@
 # Populus.JS
 ## Small JavaScript toolbelt to populate search inputs
+![](https://puu.sh/whTn4/44b01b01ae.png)
+
 
 Who never wanted to have a complete input experience in a frictionless way? Like having action buttons directly in it, the possibility to enable a bulletproof accessibility and else!
 
